@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <HorizontalScrollView
+        android:id="@+id/tabScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btnAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="All"/>
+            <Button android:id="@+id/btnNature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nature"/>
+            <Button android:id="@+id/btnCity" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="City"/>
+            <Button android:id="@+id/btnAnimals" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Animals"/>
+            <Button android:id="@+id/btnFood" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Food"/>
+            <Button android:id="@+id/btnTravel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Travel"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/selectionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tabScroll"
+        android:background="#E3F2FD"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvSelectedCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0 selected"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete" />
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share" />
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/selectionBar"
+        android:layout_above="@id/fabAdd"
+        android:columnWidth="160dp"
+        android:horizontalSpacing="6dp"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="6dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Add Photo"
+        app:srcCompat="@android:drawable/ic_input_add" />
+</RelativeLayout>

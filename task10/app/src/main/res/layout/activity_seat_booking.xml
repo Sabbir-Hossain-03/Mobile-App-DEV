@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bookingRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/legend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Available (Green)   " />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Booked (Red)   " />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Selected (Blue)" />
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridSeats"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/legend"
+        android:layout_above="@id/summaryBar"
+        android:numColumns="6"
+        android:verticalSpacing="8dp"
+        android:horizontalSpacing="8dp" />
+
+    <LinearLayout
+        android:id="@+id/summaryBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#E3F2FD"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0 seats selected | Total: $0.0" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Booking" />
+    </LinearLayout>
+</RelativeLayout>

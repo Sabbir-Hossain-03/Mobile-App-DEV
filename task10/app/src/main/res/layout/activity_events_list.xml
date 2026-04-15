@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btnAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="All"/>
+            <Button android:id="@+id/btnTech" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tech"/>
+            <Button android:id="@+id/btnSports" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sports"/>
+            <Button android:id="@+id/btnCultural" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cultural"/>
+            <Button android:id="@+id/btnAcademic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Academic"/>
+            <Button android:id="@+id/btnSocial" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Social"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/eventRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

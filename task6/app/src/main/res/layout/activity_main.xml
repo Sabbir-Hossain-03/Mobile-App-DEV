@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#1E88E5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp">
+
+        <TextView
+            android:id="@+id/tvAppTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="The Daily Reader"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnBookmark"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Bookmark article"
+            android:padding="8dp"
+            android:src="@android:drawable/btn_star_big_off" />
+
+        <ImageButton
+            android:id="@+id/btnShare"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Share article"
+            android:padding="8dp"
+            android:src="@android:drawable/ic_menu_share" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/btnTop">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imgHeader"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:contentDescription="Article header image"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_menu_gallery" />
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="#E3F2FD"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:text="TECHNOLOGY"
+                android:textColor="#1565C0"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="AI Tools Are Changing the Way Students Learn"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="Author icon"
+                    android:src="@android:drawable/sym_def_app_icon" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvAuthor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="By Riaz Khan"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="March 26, 2026" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="14dp"
+                android:background="#CCCCCC" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnIntro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:text="Introduction" />
+
+                    <Button
+                        android:id="@+id/btnKeyPoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:text="Key Points" />
+
+                    <Button
+                        android:id="@+id/btnAnalysis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:text="Analysis" />
+
+                    <Button
+                        android:id="@+id/btnConclusion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:text="Conclusion" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/secIntroTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Introduction"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/secIntroBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:text="Artificial intelligence is becoming part of daily academic life. Students use smart assistants to summarize notes, explain difficult topics, generate practice questions, and organize schedules. Teachers are also exploring how digital tools can support personalized learning rather than simply replace traditional instruction. The growth of these tools has sparked discussions in schools and universities around fairness, accuracy, and responsible use. Many learners say the biggest advantage is speed: instead of spending hours searching through multiple sources, they can get structured explanations instantly. Still, speed alone is not enough. Students must be able to judge quality, compare answers, and verify sources. A balanced approach helps technology act as a support system instead of a shortcut. In classrooms around the world, institutions are now asking how to combine human teaching, independent thinking, and machine assistance in a way that truly improves education for the long term." />
+
+            <TextView
+                android:id="@+id/secKeyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Key Points"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/secKeyBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:text="First, AI tools help students save time when gathering information. Second, they can provide step-by-step explanations that make difficult topics easier to understand. Third, these systems can support revision by producing quizzes, flashcards, and condensed notes. Fourth, students can use writing assistants to improve grammar, structure, and clarity. However, there are risks. AI outputs may contain incorrect facts, biased framing, or overly confident answers. Overdependence can reduce critical thinking if students copy without evaluating. Privacy is another issue because many tools require user data. Schools therefore need clear policies. Good practice includes verifying facts, citing original sources, and using AI as a starting point instead of a final authority. When guided correctly, these tools can increase productivity and confidence. When used carelessly, they can weaken understanding. The key lesson is that educational value depends not only on the technology itself but also on how thoughtfully students and teachers use it." />
+
+            <TextView
+                android:id="@+id/secAnalysisTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Analysis"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/secAnalysisBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:text="The strongest educational benefit of AI may be personalization. Traditional classrooms often move at a fixed pace, but digital systems can adapt explanations to different skill levels. A beginner may need examples and basic definitions, while an advanced learner may need case studies and challenges. AI tools can provide both quickly. Yet personalization also introduces concerns. If students rely too heavily on generated answers, they may lose the habit of struggling through problems, which is often where deep learning happens. Another major issue is trust. Since some outputs sound polished even when they are inaccurate, students may accept errors more easily. This is why digital literacy matters. Learners must understand how these systems generate responses and why verification is necessary. Institutions should teach evaluation skills alongside technical skills. Used responsibly, AI can widen access to quality learning support. Used uncritically, it can create confusion and dependency. The challenge is not whether AI belongs in education, but how to shape its use responsibly." />
+
+            <TextView
+                android:id="@+id/secConclusionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Conclusion"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/secConclusionBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:text="AI tools are likely to remain part of the learning environment for years to come. Their convenience, flexibility, and ability to assist students in real time make them attractive in both schools and universities. At the same time, no tool can replace judgment, discipline, and careful reading. The best future is one in which students use AI to support understanding rather than avoid effort. Teachers, policy makers, and institutions should focus on building clear rules, ethical awareness, and digital literacy so that these technologies become educational partners rather than shortcuts. The conversation should move beyond fear or excitement alone and toward practical classroom strategies. When students are taught to question, verify, and reflect, AI can become a powerful assistant. When these habits are missing, technology may create more problems than solutions. The conclusion is simple: responsible use determines whether AI becomes an opportunity or a distraction in modern learning." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Tags:"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:text="AI" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:text="Education" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:text="Students" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:text="Technology" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Related Articles"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#F5F5F5"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="Related article image"
+                        android:src="@android:drawable/ic_menu_report_image" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:text="Why Digital Literacy Matters More Than Ever"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#F5F5F5"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="Related article image"
+                        android:src="@android:drawable/ic_menu_report_image" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:text="Five Study Habits That Still Matter in the AI Era"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#F5F5F5"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="Related article image"
+                        android:src="@android:drawable/ic_menu_report_image" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:text="Can Smart Tools Improve Classroom Participation?"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:minHeight="48dp"
+        android:text="Top" />
+</RelativeLayout>
